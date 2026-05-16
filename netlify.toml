@@ -1,0 +1,12 @@
+# netlify.toml
+# Place this file in the root of your GitHub repo alongside index.html
+# Netlify reads it automatically — no dashboard config needed
+
+[build]
+  publish = "."          # Deploy the root folder (where index.html lives)
+
+# Redirect all routes to index.html (needed for JS-based page routing)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
